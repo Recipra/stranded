@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/equipment/equipment-detail.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<section class="equipment-container">
+  <h1>{{ equipment.name }} - {{ equipment.type }}</h1>
+  <div class="detail-img">
+    {% comment %} image goes here {% endcomment %}
+  </div>
+  <div class="equipment-details">
+    <h2>Description</h2>
+    <p>{{ equipment.description }}</p>
+    <h2>Durability</h2>
+    {% if equipment.durability == 'W' %}
+    <h4>Worn</h4>
+    {% else %}
+      {% if equipment.durability == 'U' %}
+      <h4>Used</h4>
+      {% else %}
+      <h4>Unused</h4>
+      {% endif %}
+    {% endif %}
+    <h2>Survival Rating</h2>
+    <h4>{{ equipment.rating }}</h4>
+  </div>
+</section>
+
+{% endblock %}
