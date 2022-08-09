@@ -38,6 +38,10 @@
     <h2>Survival Rating</h2>
     <h4>{{ equipment.rating }}</h4>
   </div>
+  <div>
+    <a href="{% url 'equipment_update' equipment.id %}" class="anchor-button">Edit</a>
+    <a href="{% url 'equipment_delete' equipment.id %}" class="anchor-button">Discard</a>
+  </div>
 </section>
 
 {% endblock %}

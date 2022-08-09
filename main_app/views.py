@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Equipment
 
 # Create your views here.
@@ -23,3 +23,15 @@ def equipment_detail(request, equipment_id):
 class EquipmentCreate(CreateView):
   model = Equipment
   fields = '__all__'
+
+class EquipmentRecycle(UpdateView):
+  model = Equipment
+  fields = ['name', 'type', 'description', 'durability', 'rating']
+
+class EquipmentUpdate(UpdateView):
+  model = Equipment
+  fields = ['description', 'durability', 'rating']
+
+class EquipmentDelete(DeleteView):
+  model = Equipment
+  success_url = '/equipment/'
