@@ -30,6 +30,7 @@ class Equipment(models.Model):
   description = models.TextField(max_length=200)
   durability = models.CharField(max_length=1, choices=DURABILITY, default=DURABILITY[0][0])
   rating = models.CharField(max_length=1, choices=RATINGS, default=RATINGS[0][0])
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def __str__(self):
     return self.name
