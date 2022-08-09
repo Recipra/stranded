@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Equipment
 
 # Create your views here.
@@ -18,3 +19,7 @@ def equipment_index(request):
 def equipment_detail(request, equipment_id):
   equipment = Equipment.objects.get(id=equipment_id)
   return render(request, 'equipment/detail.html', { 'equipment': equipment })
+
+class EquipmentCreate(CreateView):
+  model = Equipment
+  fields = '__all__'

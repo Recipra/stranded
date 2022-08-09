@@ -22,8 +22,9 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/equipment">Your Equipment</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="{% url 'equipment_index' %}">Your Equipment</a></li>
+        <li><a href="{% url 'equipment_create' %}">Add Equipment</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
       </ul>
     </nav>
   </header>

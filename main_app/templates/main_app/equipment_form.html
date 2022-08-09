@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <h1>Add Equipment</h1>
+</div>
+<form action="" method="post" class="form-container">
+  {% csrf_token %}
+  {{ form }}
+  <button type="submit" class="submit">Add Equipment</button>
+</form>
+
+{% endblock %}

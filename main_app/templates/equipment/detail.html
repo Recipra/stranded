@@ -10,7 +10,15 @@
 {% block content %}
 
 <section class="equipment-container">
-  <h1>{{ equipment.name }} - {{ equipment.type }}</h1>
+  {% if equipment.type == 'T' %}
+  <h1>{{ equipment.name }} - Tool</h1>
+  {% else %}
+    {% if equipment.type == 'S' %}
+    <h1>{{ equipment.name }} - Shelter</h1>
+    {% else %}
+    <h1>{{ equipment.name }} - Outfit</h1>
+    {% endif %}
+  {% endif %}
   <div class="detail-img">
     {% comment %} image goes here {% endcomment %}
   </div>

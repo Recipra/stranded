@@ -33,3 +33,7 @@ class Equipment(models.Model):
 
   def __str__(self):
     return self.name
+
+  def get_absolute_url(self):
+    return reverse('equipment_detail', kwargs={'equipment_id': self.id})
+  
