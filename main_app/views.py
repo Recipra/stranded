@@ -3,6 +3,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Equipment
 
 # Create your views here.
@@ -27,17 +29,19 @@ class Home(LoginView):
 def about(request):
   return render(request, 'about.html')
 
+@login_required
 def equipment_index(request):
-  tools = Equipment.objects.filter(type='T')
-  shelters = Equipment.objects.filter(type='S')
-  outfits = Equipment.objects.filter(type='O')
+  tools = Equipment.objects.filter(type='T', user=request.user)
+  shelters = Equipment.objects.filter(type='S', user=request.user)
+  outfits = Equipment.objects.filter(type='O', user=request.user)
   return render(request, 'equipment/index.html', { 'tools': tools, 'shelters': shelters, 'outfits': outfits })
 
+@login_required
 def equipment_detail(request, equipment_id):
   equipment = Equipment.objects.get(id=equipment_id)
   return render(request, 'equipment/detail.html', { 'equipment': equipment })
 
-class EquipmentCreate(CreateView):
+class EquipmentCreate(LoginRequiredMixin, CreateView):
   model = Equipment
   fields = '__all__'
   
@@ -45,14 +49,14 @@ class EquipmentCreate(CreateView):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
-class EquipmentRecycle(UpdateView):
+class EquipmentRecycle(LoginRequiredMixin, UpdateView):
   model = Equipment
   fields = ['name', 'type', 'description', 'durability', 'rating']
 
-class EquipmentUpdate(UpdateView):
+class EquipmentUpdate(LoginRequiredMixin, UpdateView):
   model = Equipment
   fields = ['description', 'durability', 'rating']
 
-class EquipmentDelete(DeleteView):
+class EquipmentDelete(LoginRequiredMixin, DeleteView):
   model = Equipment
   success_url = '/equipment/'
