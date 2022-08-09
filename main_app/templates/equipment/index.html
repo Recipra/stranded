@@ -6,3 +6,64 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/equipment/equipment-index.css' %}">
 
 {% endblock %}
+
+{% block content %}
+
+<section class="equipment-container">
+  <div class="tool-container">
+    <h1>Tools</h1>
+    {% if tools %}
+      {% for tool in tools %}
+      <div class="card">
+        <div class="card-content">
+          <div class="card-image">
+
+          </div>
+          <h3>{{ tool.name }}</h3>
+          <h4>Survival Rating: {{ tool.rating }}</h4>
+        </div>
+      </div>
+      {% endfor %}
+    {% else %}
+    <h2>You should look for some tools...</h2>
+    {% endif %}
+  </div>
+  <div class="shelter-container">
+    <h1>Shelters</h1>
+    {% if shelters %}
+      {% for shelter in shelters %}
+      <div class="card">
+        <div class="card-content">
+          <div class="card-image">
+
+          </div>
+          <h3>{{ shelter.name }}</h3>
+          <h4>Survival Rating: {{ shelter.rating }}</h4>
+        </div>
+      </div>
+      {% endfor %}
+    {% else %}
+    <h2>You should make a shelter...</h2>
+    {% endif %}
+  </div>
+  <div class="outfits-container">
+    <h1>Outfits</h1>
+    {% if outfits %}
+      {% for outfit in outfits %}
+      <div class="card">
+        <div class="card-content">
+          <div class="card-image">
+
+          </div>
+          <h3>{{ outfit.name }}</h3>
+          <h4>Survival Rating: {{ outfit.rating }}</h4>
+        </div>
+      </div>
+      {% endfor %}
+    {% else %}
+    <h2>You should probably wear an outfit...</h2>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}
