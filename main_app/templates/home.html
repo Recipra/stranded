@@ -20,9 +20,9 @@
   <form action="{% url 'home' %}" method="post" class="login">
     <h1>Login</h1>
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form }}
     <input type="hidden" name="next" value="{{ next }}">
-    <button type="submit" class="btn submit">Login</button>
+    <button type="submit" class="submit">Login</button>
   </form>
 </section>
 {% endif %}
