@@ -1,4 +1,53 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Comfortaa', cursive;
-  background-color: aqua;
+  background-image: url('https://cdna.artstation.com/p/assets/images/images/003/052/182/large/todor-hristov-2.jpg?1469028977');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.35);
+  display: block;
+}
+
+.header-container {
+  padding: 5px;
+}
+
+.logo-container {
+  padding: 0 5px;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 5px 0;
+  padding: 0;
+}
+
+li {
+  padding: 0 5px;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: smaller;
+}
+
+form {
+  background-color: rgba(0, 0, 0, 0.35);
 }
