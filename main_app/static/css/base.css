@@ -26,6 +26,7 @@ header {
 }
 
 .logo-container {
+  font-size: large;
   padding: 0 5px;
 }
 
@@ -35,7 +36,7 @@ nav > ul {
   justify-content: flex-end;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 10px 0 0 0;
 }
 
 li {
