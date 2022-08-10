@@ -43,7 +43,7 @@ def equipment_detail(request, equipment_id):
 
 class EquipmentCreate(LoginRequiredMixin, CreateView):
   model = Equipment
-  fields = '__all__'
+  fields = ['name', 'type', 'description', 'durability', 'rating']
   
   def form_valid(self, form):
     form.instance.user = self.request.user
