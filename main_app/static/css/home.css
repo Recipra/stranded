@@ -1,0 +1,59 @@
+main {
+  color: rgba(245, 245, 245, 0.8);
+}
+
+.title-container {
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.65);
+  text-shadow: 3px 0 rgba(128, 128, 128, 0.7);
+}
+
+.login-form {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 5px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+.login > h1 {
+  margin: 10px 0;
+  text-align: right;
+  padding: 0 5px;
+}
+
+.login > label {
+  text-align: right;
+  padding: 10px 5px;
+}
+
+.login > input {
+  font-family: inherit;
+  align-self: flex-end;
+  width: 85%;
+  margin-right: 5px;
+}
+
+.submit {
+  font-family: inherit;
+  font-size: large;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  align-self: center;
+  width: 20%;
+  margin: 30px 0;
+  padding: 5px 0;
+}
+
+.submit:hover {
+  background-color: rgba(245, 245, 245, 0.6);
+  color: rgba(0, 0, 0, 0.8);
+}
