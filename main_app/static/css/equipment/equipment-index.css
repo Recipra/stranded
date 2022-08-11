@@ -59,3 +59,29 @@ main {
   justify-content: center;
   text-align: center;
 }
+
+@media only screen and (min-width: 768px) {
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .equipment-container {
+    width: 70%;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .equipment-container {
+    width: 60%;
+  }
+
+  .card {
+    width: 33%;
+  }
+
+}

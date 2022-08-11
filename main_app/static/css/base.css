@@ -57,3 +57,16 @@ li:hover {
 li:hover > a {
   color: rgba(0, 0, 0, 0.9);
 }
+
+@media only screen and (min-width: 768px) {
+
+  .logo-container {
+    font-size: x-large;
+  }
+
+  nav > ul {
+    font-size: larger;
+    gap: 2em;
+  }
+
+}
