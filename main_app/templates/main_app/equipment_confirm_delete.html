@@ -1,19 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/equipment/equipment_confirm_delete.css' %}">
+{% endblock %}
+
 {% block content %}
 
-<div class="page-header">
-  <h1>Discard {{ equipment.name }}?</h1>
-</div>
-<div class="form-container">
-  <p>Remember, you are preparing for survival, any and all resources are invaluable. For example, a worn shirt could be recycled as a makeshift bag!</p>
-  <form action="" method="POST" class="form">
-    {% csrf_token %}
-    <a href="{% url 'equipment_recycle' equipment.id %}">Recycle</a>
-    <button type="submit">Discard</button>
-    <a href="{% url 'equipment_detail' equipment.id %}">Cancel</a>
-  </form>
-</div>
+<section class="page-container">
+  <div class="page-header">
+    <h1>Discard {{ equipment.name }}?</h1>
+  </div>
+  <div class="form-container">
+    <p>Remember, you are preparing for survival, any and all resources are invaluable. For example, a worn shirt could be recycled as a makeshift bag!</p>
+    <form action="" method="POST" class="form">
+      {% csrf_token %}
+      <a href="{% url 'equipment_recycle' equipment.id %}">Recycle</a>
+      <button type="submit">Discard</button>
+      <a href="{% url 'equipment_detail' equipment.id %}">Cancel</a>
+    </form>
+  </div>
+</section>
 
 {% endblock %}
