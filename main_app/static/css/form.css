@@ -34,21 +34,30 @@ main {
 }
 
 .equipment-form > input {
+  background-color: rgba(245, 245, 245, 0.8);
+  border: none;
   align-self: flex-end;
   width: 65%;
   margin-right: 5px;
+  padding: 3px;
 }
 
 .equipment-form > textarea {
+  background-color: rgba(245, 245, 245, 0.8);
+  border: none;
   align-self: flex-end;
   width: 85%;
   margin-right: 5px;
+  padding: 3px;
 }
 
 .equipment-form > select {
+  background-color: rgba(245, 245, 245, 0.8);
+  border: none;
   font-size: medium;
   align-self: flex-end;
   width: 35%;
+  padding: 5px;
   margin-right: 5px;
 }
 

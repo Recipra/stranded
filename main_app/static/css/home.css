@@ -34,10 +34,13 @@ main {
 }
 
 .login > input {
+  background-color: rgba(245, 245, 245, 0.8);
+  border: none;
   font-family: inherit;
   align-self: flex-end;
   width: 85%;
   margin-right: 5px;
+  padding: 3px;
 }
 
 .submit {
