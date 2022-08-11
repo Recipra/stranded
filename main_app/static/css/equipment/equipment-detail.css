@@ -55,3 +55,23 @@ main {
   background-color: rgba(245, 245, 245, 0.6);
   color: rgba(0, 0, 0, 0.8);
 }
+
+@media only screen and (min-width: 768px) {
+
+  .equipment-content {
+    width: 60%;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .equipment-content {
+    width: 30%;
+  }
+
+  p, h4 {
+    font-size: larger;
+  }
+
+}

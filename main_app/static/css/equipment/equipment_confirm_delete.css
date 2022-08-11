@@ -45,3 +45,50 @@ p {
   background-color: rgba(245, 245, 245, 0.6);
   color: rgba(0, 0, 0, 0.8);
 }
+
+@media only screen and (min-width: 768px) {
+
+  .page-container {
+    height: 100%;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    height: 40%;
+    width: 50%;
+  }
+
+  .form-container > p {
+    text-align: center;
+    height: 40%;
+    width: 60%;
+    padding-top: 20px;
+  }
+
+  .form > * {
+    width: 30%;
+    padding: 5px;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .page-container {
+    height: 100%;
+  }
+
+  .form-container {
+    height: 50%;
+    width: 30%;
+  }
+
+  .form-container > p {
+    font-size: larger;
+    margin-top: 50px;
+  }
+
+}
