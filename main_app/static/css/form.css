@@ -6,6 +6,16 @@ main {
   height: 90vh;
 }
 
+.helptext {
+  font-size: medium;
+  text-align: right;
+  padding: 0 5px;
+}
+
+.helptext > ul {
+  list-style: none;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
