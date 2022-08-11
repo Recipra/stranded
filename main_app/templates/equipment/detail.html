@@ -19,28 +19,30 @@
     <h1>{{ equipment.name }} - Outfit</h1>
     {% endif %}
   {% endif %}
-  <div class="detail-img">
-    {% comment %} image goes here {% endcomment %}
-  </div>
-  <div class="equipment-details">
-    <h2>Description</h2>
-    <p>{{ equipment.description }}</p>
-    <h2>Durability</h2>
-    {% if equipment.durability == 'W' %}
-    <h4>Worn</h4>
-    {% else %}
-      {% if equipment.durability == 'U' %}
-      <h4>Used</h4>
+  <div class="equipment-content">
+    <div class="detail-img">
+      {% comment %} image goes here {% endcomment %}
+    </div>
+    <div class="equipment-details">
+      <h2>Description</h2>
+      <p>{{ equipment.description }}</p>
+      <h2>Durability</h2>
+      {% if equipment.durability == 'W' %}
+      <h4>Worn</h4>
       {% else %}
-      <h4>Unused</h4>
+        {% if equipment.durability == 'U' %}
+        <h4>Used</h4>
+        {% else %}
+        <h4>Unused</h4>
+        {% endif %}
       {% endif %}
-    {% endif %}
-    <h2>Survival Rating</h2>
-    <h4>{{ equipment.rating }}</h4>
-  </div>
-  <div>
-    <a href="{% url 'equipment_update' equipment.id %}" class="anchor-button">Edit</a>
-    <a href="{% url 'equipment_delete' equipment.id %}" class="anchor-button">Discard</a>
+      <h2>Survival Rating</h2>
+      <h4>{{ equipment.rating }}</h4>
+    </div>
+    <div class="equipment-buttons">
+      <a href="{% url 'equipment_update' equipment.id %}" class="anchor-button">Edit</a>
+      <a href="{% url 'equipment_delete' equipment.id %}" class="anchor-button">Discard</a>
+    </div>
   </div>
 </section>
 
