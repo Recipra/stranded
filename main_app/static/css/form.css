@@ -96,6 +96,14 @@ main {
     width: 60%;
   }
 
+  .equipment-form > input {
+    font-size: large;
+  }
+
+  .equipment-form > textarea {
+    font-size: large;
+  }
+
 }
 
 @media only screen and (min-width: 1024px) {

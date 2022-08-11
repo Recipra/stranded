@@ -96,6 +96,7 @@ main {
   }
 
   .login > input {
+    font-size: large;
     width: 70%;
   }
 
