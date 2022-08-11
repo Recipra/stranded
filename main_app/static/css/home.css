@@ -60,3 +60,77 @@ main {
   background-color: rgba(245, 245, 245, 0.6);
   color: rgba(0, 0, 0, 0.8);
 }
+
+@media only screen and (min-width: 768px) {
+
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+
+  section {
+    height: 70%;
+    width: 50%;
+  }
+
+  .title-container {
+    height: 100%;
+  }
+
+  .login-form {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .login {
+    background-color: rgba(0, 0, 0, 0.35);
+    justify-content: center;
+    gap: 2em;
+    height: 80%;
+    width: 80%;
+  }
+
+  .login > input {
+    width: 70%;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+
+  section {
+    height: 40%;
+    width: 50%;
+  }
+
+  .login-form {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .login {
+    background-color: rgba(0, 0, 0, 0.35);
+    justify-content: center;
+    gap: 1em;
+    width: 80%;
+  }
+
+  .login > input {
+    width: 70%;
+  }
+
+}
