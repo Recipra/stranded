@@ -20,7 +20,7 @@ main {
   flex-direction: column;
   justify-content: center;
   height: 75%;
-  font-size: small;
+  font-size: larger;
 }
 
 .card-container {

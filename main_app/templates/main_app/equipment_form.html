@@ -16,10 +16,12 @@
   <h1>Add Equipment</h1>
   {% endif %}
 </div>
-<form action="" method="post" class="form-container">
-  {% csrf_token %}
-  {{ form }}
-  <button type="submit" class="submit">Submit</button>
-</form>
+<div class="form-container">
+  <form action="" method="post" class="equipment-form">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="submit">Submit</button>
+  </form>
+</div>
 
 {% endblock %}
