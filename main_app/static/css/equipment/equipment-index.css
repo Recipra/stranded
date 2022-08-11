@@ -1,0 +1,61 @@
+main {
+  color: rgba(245, 245, 245, 0.9);
+}
+
+.equipment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  margin-top: 10px;
+}
+
+.equipment-container > div {
+  height: 33%;
+  text-align: right;
+}
+
+.empty-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 75%;
+  font-size: small;
+}
+
+.card-container {
+  height: 75%;
+  width: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 90%;
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.card:hover {
+  background-color: rgba(245, 245, 245, 0.4);
+}
+
+.card:hover > a {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}

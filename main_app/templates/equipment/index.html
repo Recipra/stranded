@@ -13,6 +13,7 @@
   <div class="tool-container">
     <h1>Tools</h1>
     {% if tools %}
+    <div class="card-container">
       {% for tool in tools %}
       <div class="card">
         <a href="{% url 'equipment_detail' tool.id %}">
@@ -26,13 +27,17 @@
         </a>
       </div>
       {% endfor %}
+    </div>
     {% else %}
-    <h2>You should look for some tools...</h2>
+    <div class="empty-message">
+      <h2>You should look for some tools...</h2>
+    </div>
     {% endif %}
   </div>
   <div class="shelter-container">
     <h1>Shelters</h1>
     {% if shelters %}
+    <div class="card-container">
       {% for shelter in shelters %}
       <div class="card">
         <a href="{% url 'equipment_detail' shelter.id %}">
@@ -46,13 +51,17 @@
         </a>
       </div>
       {% endfor %}
+    </div>
     {% else %}
-    <h2>You should make a shelter...</h2>
+    <div class="empty-message">
+      <h2>You should make a shelter...</h2>
+    </div>
     {% endif %}
   </div>
   <div class="outfits-container">
     <h1>Outfits</h1>
     {% if outfits %}
+    <div class="card-container">
       {% for outfit in outfits %}
       <div class="card">
         <a href="{% url 'equipment_detail' outfit.id %}">
@@ -66,8 +75,11 @@
         </a>
       </div>
       {% endfor %}
+    </div>
     {% else %}
-    <h2>You should probably wear an outfit...</h2>
+    <div class="empty-message">
+      <h2>You should probably wear an outfit...</h2>
+    </div>
     {% endif %}
   </div>
 </section>
